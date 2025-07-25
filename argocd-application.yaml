@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
   labels:
     app: flask-authen
-    env: production
+    env: default
   annotations:
     argocd.argoproj.io/sync-wave: "1"
 spec:
