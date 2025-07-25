@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-container
-        image: wuoc4114/flask-authen:1255d5c292fad93971d8a8231081cf9a8bd2f19f
+        image: wuoc4114/flask-authen:618e0c53c296f8e328a3b0e660de23da6518c26d
         ports:
         - containerPort: 5000
         envFrom:
