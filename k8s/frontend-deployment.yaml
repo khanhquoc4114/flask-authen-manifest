@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: frontend-container
-        image: wuoc4114/flask-authen-frontend:${GIT_SHA}  
+        image: wuoc4114/flask-authen-frontend:2e4a2d4b739162812a15d171c149d202c2ebb287
         imagePullPolicy: Always
         ports:
         - containerPort: 80
