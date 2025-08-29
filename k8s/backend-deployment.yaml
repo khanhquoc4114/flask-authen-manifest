@@ -19,6 +19,17 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
+        env:
+          - name: POSTGRES_HOST
+            value: "postgres-service"
+          - name: POSTGRES_PORT
+            value: "5432"
+          - name: POSTGRES_DB
+            value: "db"
+          - name: POSTGRES_USER
+            value: "db"
+          - name: POSTGRES_PASSWORD
+            value: "db"
         envFrom:
         - secretRef:
             name: app-secret
