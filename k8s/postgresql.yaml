@@ -31,6 +31,10 @@ spec:
           ports:
             - containerPort: 5432
           env:
+            - name: POSTGRES_HOST
+              value: "postgres-service"
+            - name: POSTGRES_PORT
+              value: "5432"
             - name: POSTGRES_DB
               value: db
             - name: POSTGRES_USER
