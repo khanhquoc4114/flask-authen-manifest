@@ -18,7 +18,7 @@ spec:
         image: wuoc4114/flask-authen-backend:8b6811ab3270db1f471e28738f52bf7bdf7734f5
         imagePullPolicy: Always
         ports:
-        - containerPort: 5000
+        - containerPort: 8000
         envFrom:
         - secretRef:
             name: app-secret
@@ -33,5 +33,5 @@ spec:
   selector:
     app: flask-backend
   ports:
-    - port: 5000
-      targetPort: 5000
+    - port: 8000
+      targetPort: 8000
