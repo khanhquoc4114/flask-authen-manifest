@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: backend-container
-        image: wuoc4114/flask-authen-backend:bd26fd573aac664b67801a80a5ac5fc67c5d19f5
+        image: wuoc4114/flask-authen-backend:541e3ce89d001beb4ad5898775ea7a3abdffe417
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
