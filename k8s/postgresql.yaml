@@ -5,10 +5,11 @@ metadata:
   namespace: flask-authen
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteOnce         
   resources:
     requests:
-      storage: 5Gi
+      storage: 5Gi           
+  storageClassName: standard 
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -42,10 +43,11 @@ spec:
             - name: POSTGRES_PASSWORD
               value: db
             - name: PGDATA
-              value: /var/lib/postgresql/data/pgdata
+              value: /var/lib/postgresql/data
           volumeMounts:
-            - mountPath: /var/lib/postgresql/data/pgdata
+            - mountPath: /var/lib/postgresql/data
               name: postgres-storage
+              subPath: pgdata
 
       volumes:
         - name: postgres-storage
